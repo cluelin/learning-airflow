@@ -16,7 +16,12 @@ with DAG(
     
     bash_t1 = BashOperator(
         task_id="bash_t1",
-        bash_command="/opt/airflow/plugins/echo.sh",
+        bash_command="/opt/airflow/plugins/shell/select.sh",
+    )
+
+    bash_t3 = BashOperator(
+        task_id="bash_t3",
+        bash_command="ls -al /opt/airflow/plugins/shell",
     )
 
     bash_t2 = BashOperator(
@@ -25,3 +30,4 @@ with DAG(
     )
 
     bash_t1 >> bash_t2
+    bash_t3

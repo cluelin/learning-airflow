@@ -15,12 +15,12 @@ with DAG(
 ) as dag:
     
     bash_t1 = BashOperator(
-        task_id="base_t1",
+        task_id="bash_t1",
         bash_command="/opt/airflow/plugins/shell/echo.sh",
     )
 
     bash_t2 = BashOperator(
-        task_id="base_t2",
+        task_id="bash_t2",
         bash_command="echo $HOSTNAME",
     )
 

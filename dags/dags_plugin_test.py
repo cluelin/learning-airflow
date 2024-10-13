@@ -31,5 +31,5 @@ with DAG(
 
     from airflow.utils.edgemodifier import Label
 
-    bash_t1 >> [Label('label 1'), Label('label 2')] >> [bash_t2, bash_t3]
+    bash_t1 >> Label('label 1') >> [bash_t2, bash_t3]
     

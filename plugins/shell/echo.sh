@@ -1,1 +1,1 @@
-echo hell
+echo $1

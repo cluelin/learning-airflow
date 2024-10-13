@@ -16,7 +16,7 @@ with DAG(
     
     bash_t1 = BashOperator(
         task_id="base_t1",
-        bash_command="/opt/airflow/plugins/shell/echo.sh",
+        bash_command="echo whoami",
     )
 
     bash_t2 = BashOperator(
